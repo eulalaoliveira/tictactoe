@@ -11,7 +11,7 @@ body {
 
   font-family: sans-serif;
   height: 100vh;
-  background-color: white;
+  background-color: black;
 }
 
 .title {
@@ -19,6 +19,50 @@ body {
   font-size: 3rem;
   color: rgb(199, 199, 199);
   margin-bottom: 2rem;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 240px);
+  grid-template-rows: repeat(3, 200px);
+  gap: 1rem;
+}
+
+.board.game-over {
+  opacity: 0.8;
+}
+
+.cell {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+
+  background-color: white;
+  border-radius: 5px;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #00000066;
+
+  cursor: pointer;
+}
+
+img {
+  position: absolute;
+  z-index: -1;
+  animation: astronauta 7s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes astronauta {
+  0% {
+    transform: translateX(-350px);
+  }
+  50% {
+    transform: translateX(-450px) translateY(50px) rotate(0.01turn);
+  }
+  100% {
+    transform: translateX(-350px);
+  }
 }
 
 
