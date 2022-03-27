@@ -3,7 +3,7 @@
  * @author Larissa Oliveira Santos
  */
 
-import React, { createContext, useState } from 'react';
+import React, { createContext, useState, useEffect } from 'react';
 
 export const Context = createContext({});
 
@@ -48,12 +48,33 @@ export default function AppProvider({ children }) {
             if (cells.every((el) => el === "O")) setWinner("O");
             if (cells.every((el) => el === "X")) setWinner("X");
         });
+        
+        checkDraw();
+    };
 
+    /**
+     * function to check if all cells are filled
+     */
+    const checkDraw = () => {
+        if (board.every((el) => el !== "")) {
+            setWinner("D");
+        }
+    };
+
+    useEffect(checkWinner, [board]);
+
+    /**
+     * reset game to all initial state
+     */
+    const resetGame = () => {
+        setCurrentPlayer("O");
+        setBoard(emptyBoard);
+        setWinner(null);
     };
 
     return (
-        <Context.Provider value={{ winner, board, handleCellClick }}>
+        <Context.Provider value={{ winner, board, handleCellClick, resetGame }}>
             {children}
         </Context.Provider>
-    )
+    );
 }
