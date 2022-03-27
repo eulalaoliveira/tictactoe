@@ -1,3 +1,11 @@
+:root {
+  --O-color: #2196f3;
+  --X-color: #f44336;
+  --grey: rgb(199, 199, 199);
+  --green: #4caf50;
+  --shadow: #e7e7e7;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -17,7 +25,7 @@ body {
 .title {
   text-align: center;
   font-size: 3rem;
-  color: rgb(199, 199, 199);
+  color: var(--grey);
   margin-bottom: 2rem;
 }
 
@@ -44,6 +52,24 @@ body {
   color: #00000066;
 
   cursor: pointer;
+}
+
+.cell.O,
+.cell.X,
+.game-over .cell {
+  cursor: not-allowed;
+}
+
+.cell.O {
+  background-color: var(--O-color);
+}
+
+.cell.X {
+  background-color: var(--X-color);
+}
+
+footer {
+  text-align: center;
 }
 
 img {

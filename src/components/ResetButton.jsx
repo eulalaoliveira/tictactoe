@@ -1,7 +1,7 @@
 import React from 'react';
 
-export default function ResetButton() {
+export default function ResetButton({ resetGame }) {
     return (
-        <button>Restart!</button>
-    )
+        <button onClick={resetGame}>Restart!</button>
+    );
 }

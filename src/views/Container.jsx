@@ -10,7 +10,8 @@ import Footer from "../components/Footer";
 import { Context } from "../context/AppProvider";
 
 export default function TicTacToe() {
-  const { winner, board, handleCellClick } = useContext(Context);
+  const { winner, board, handleCellClick, resetGame } = useContext(Context);
+
   return (
     <main>
       <Title />
@@ -19,8 +20,8 @@ export default function TicTacToe() {
         alt="astronauta"
       />
       <Board winner={winner} board={board} handleCellClick={handleCellClick} />
-      <Footer />
+      {winner && <Footer winner={winner} resetGame={resetGame} />}
     </main>
-  )
+  );
 }
 

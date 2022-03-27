@@ -26,7 +26,7 @@ export default function AppProvider({ children }) {
 
             setCurrentPlayer(currentPlayer === "X" ? "O" : "X");
         }
-    }
+    };
     /**
      * function to check possible combinations in the array
      */
