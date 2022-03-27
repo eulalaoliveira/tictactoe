@@ -1,10 +1,11 @@
 # TicTacToe Game created using React JS
 
 A project created to demonstrate programming good practices and some react concepts like working with components and state management.
+(the astronaut moves btw)
 
 ## Preview
 
-<p><img align="center" src="" alt="previewTicTacToe" /></p>
+![tictactoe screen](https://user-images.githubusercontent.com/68619107/160295732-50af9d3e-9b9f-47b8-8121-fca6e418bdd1.png)
 
 ## Available Scripts
 
