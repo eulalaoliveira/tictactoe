@@ -4,12 +4,13 @@
  */
 
 import React from 'react'
+import Title from '../components/Title';
 
 export default function Container() {
   return (
-    <div>
-      
-    </div>
+    <main>
+      <Title />
+    </main>
   )
 }
 

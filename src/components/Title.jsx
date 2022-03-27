@@ -2,6 +2,6 @@ import React from 'react';
 
 export default function Title() {
     return (
-        <h1>Genius TicTacToe</h1>
+        <h1 className="title">Genius TicTacToe</h1>
     )
 }
